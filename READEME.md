@@ -1,0 +1,1 @@
+This is a small part of all code(laboratory, courses, competetive-programming-seems tasks), that I wrote for last time.
