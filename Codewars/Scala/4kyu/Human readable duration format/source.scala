@@ -16,11 +16,11 @@ object HumanTime {
       "second"
     )
     val counts: Array[Int] = Array[Int] (
-      60 * 60 * 24 * 365,//years
-      60 * 60 * 24,//days
-      60 * 60,//hours
-      60,//minutes
-      1//seconds
+      60 * 60 * 24 * 365,   //years
+      60 * 60 * 24,         //days
+      60 * 60,              //hours
+      60,                   //minutes
+      1                     //seconds
     )
     var it = 0
     while(it < counts.length) {

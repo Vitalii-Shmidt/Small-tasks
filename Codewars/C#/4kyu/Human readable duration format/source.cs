@@ -7,7 +7,7 @@ public class HumanTimeFormat{
                 ans = "now";
             }
             int sec = seconds;
-            var times = new stringp[] {
+            var times = new string[] {
                 "year",
                 "day",
                 "hour",

@@ -2,8 +2,12 @@
 
 object BestTravel {
   def chooseBestSum(t: Int,k: Int,ls: List[Int]) : Int = {
-    var max = -1
-    val resArr = ls.combinations(k).map(x => x.sum).toArray.sorted.filter(x => (x <= t))
+    var max = Int.MinValue
+    val resArr = ls.combinations(k)
+    			   .map(x => x.sum)
+    			   .toArray
+    			   .sorted
+    			   .filter( _ <= t )
     if(!resArr.isEmpty) {
       max = resArr.max
     }
