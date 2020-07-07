@@ -4,22 +4,16 @@ using System.Numerics;
 
 public static class Kata
 {
-    public static string sumStrings(string a, string b)
-    {
+    public static string sumStrings(string a, string b) {
         var trash = new BigInteger();
         var aIsOk = BigInteger.TryParse(a, out trash);
         var bIsOk = BigInteger.TryParse(b, out trash);
 
-        if (aIsOk && bIsOk)
-        {
+        if (aIsOk && bIsOk) {
             return (BigInteger.Parse(a) + BigInteger.Parse(b)).ToString();
-        }
-        else if (bIsOk)
-        {
+        } else if (bIsOk) {
             return (BigInteger.Parse(b)).ToString();
-        }
-        else if (aIsOk)
-        {
+        } else if (aIsOk) {
             return (BigInteger.Parse(a)).ToString();
         }
 
