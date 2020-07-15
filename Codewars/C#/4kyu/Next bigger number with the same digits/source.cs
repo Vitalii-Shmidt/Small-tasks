@@ -6,7 +6,7 @@ public class Kata
 {
     // Solution with extension method that get all permutation of String
         public static long NextBiggerNumber(long n) {
-            if(n.ToString().Length == 0 || n.ToString().Distinct().Length == 1) {
+            if(n.ToString().Length == 0 || n.ToString().Distinct().Count() == 1) {
             	return -1;
             }
 
