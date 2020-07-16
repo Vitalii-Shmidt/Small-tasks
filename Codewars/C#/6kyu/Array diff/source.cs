@@ -4,6 +4,14 @@ using System.Linq;
 using System.Collections.Generic;
 
 public class Kata {
+  // New solution 
+    public static int[] ArrayDiff(int[] a, int[] b) {
+      return a.Where(x => !b.Contains(x))
+              .ToArray();
+  }
+
+
+  // An older solution
   public static int[] ArrayDiff(int[] a, int[] b) {
     var ans = new List<int>();
     foreach(var kek in a) {
