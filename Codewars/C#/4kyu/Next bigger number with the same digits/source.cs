@@ -4,6 +4,7 @@ using System.Linq;
 
 public class Kata
 {
+    // (TL)
     // Solution with extension method that get all permutation of String
         public static long NextBiggerNumber(long n) {
             if(n.ToString().Length == 0 || n.ToString().Distinct().Count() == 1) {

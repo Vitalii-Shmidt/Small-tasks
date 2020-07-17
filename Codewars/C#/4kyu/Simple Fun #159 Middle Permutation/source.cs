@@ -4,6 +4,7 @@
     using System.Linq;
 
 public class Kata {
+    // (TL)
     public string MiddlePermutation(string s) {
         var permutations = s.Permutations()
                             .Select(x => string.Join("", x))
