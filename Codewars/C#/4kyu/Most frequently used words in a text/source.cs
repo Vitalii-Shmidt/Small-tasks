@@ -3,28 +3,16 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-public class TopWords
-{          // (TL)
-           public static List<string> Top3(string s) {
-            var mostFrequentlyUsedWords = s.Trim()
-                                           .Split(' ', ',', ':', '/')
-                                           .Select(x => x.ToLower())
-                                           .GroupBy(val => val)
-                                           .OrderByDescending(gr => gr.Count())
-                                           .Select(x => x.Key);
-           
-            var ans = new List<string>();
-
-            foreach(var word in mostFrequentlyUsedWords) {
-               if(ans.Count() == 3) {
-                    break;
-                } 
-              if(!string.IsNullOrWhiteSpace(word)) {
-                    ans.Add(word);
-                }
-               
-            }
-
-            return ans;
+public class TopWords {
+                  public static List<string> Top3(string s) {
+            return s.Trim()
+                    .Split(new char[] {' ', ',', ':', '/', '_', '-', '!', '?', '.' })
+                    .Where(x => x != string.Empty && x.Any(ch => char.IsLetter(ch) || ch == '\''))
+                    .Select(x => x.ToLower().TrimStart('\''))
+                    .GroupBy(val => val)
+                    .OrderByDescending(gr => gr.Count())
+                    .Take(3)
+                    .Select(x => x.Key)
+                    .ToList();
         }
 }
