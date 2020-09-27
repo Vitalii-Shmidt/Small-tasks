@@ -18,7 +18,7 @@ class Solution {
 
     // Complete the repeatedString function below.
     static long repeatedString(string s, long n) {
-            if (string.IsNullOrEmpty(s) || string.IsNullOrWhiteSpace(s)) return 0;
+            if (s is null || s == "") return 0;
             if (s.Length == 1)
             {
                 if (s[0] == 'a')
