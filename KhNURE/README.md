@@ -1,0 +1,1 @@
+ I'm studying Computer Science for 2 years at the department of Arificial intelligence in Kharkiv National University of Radioelectronics. So, this is a repository, where I uploading some of laboratory, that I took here. 

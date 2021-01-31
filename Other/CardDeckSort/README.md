@@ -1,0 +1,1 @@
+This is problem I got on interview in %company_name% on position .NET intern.
