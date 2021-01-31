@@ -13,3 +13,14 @@ public static class Kata {
               .Count == 26;
         }
 }
+
+using System;
+using System.Linq;
+
+public static class Kata
+{
+  public static bool IsPangram(string source)
+  {
+    return source.ToLower().Where(char.IsLetter).GroupBy(val => val).Count() == 26;
+  }
+}
